@@ -42,6 +42,6 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The Fruit load list contains:")
 streamlit.dataframe(my_data_rows)
 
-add_my_fruit = streamlit.multiselect(list(fruit_load_list.index))
+add_my_fruit = streamlit.multiselect(list("select * from pc_rivery_db.public.fruit_load_list"))
 
 my_curr.execute = ("insert into fruit_load_list values('from streamlit')")
